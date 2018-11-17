@@ -3,20 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="https://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/3.0.0/vconsole.min.js"></script>
+    <style>
+        *{padding:0;margin:0;}
+        html{width: 100%;}
+        body{width:100%;}
+    </style>
     <script>
         var vConsole = new VConsole();
     </script>
 </head>
 
 <body>
-    <img id="test-img" src="./1.jpg" width="500">
+        
     <video></video>
-    <!-- <script src="./index.js"></script> -->
-    <script>
+    <script src="./index.js"></script>
+    <!-- <script>
         window.URL = (window.URL || window.webkitURL || window.mozURL || window.msURL);
         if (navigator.mediaDevices === undefined) {
             navigator.mediaDevices = {};
@@ -58,7 +63,7 @@
 
         // 正式启动摄像头
         navigator.mediaDevices.getUserMedia(mediaOpts).then(successFunc).catch(errorFunc);
-    </script>
+    </script> -->
 </body>
 
 </html>
