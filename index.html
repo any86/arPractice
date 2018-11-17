@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <img id="test-img" src="/1.e2c48800.jpg" width="500">
+    <!-- <img id="test-img" src="./1.jpg" width="500"> -->
     <video></video>
     <!-- <script src="./index.js"></script> -->
     <script>window.URL = window.URL || window.webkitURL || window.mozURL || window.msURL;
@@ -60,7 +60,7 @@ function errorFunc(err) {
 } // 正式启动摄像头
 
 
-navigator.mediaDevices.getUserMedia(mediaOpts).then(successFunc).catch(errorFunc);</script>
+navigator.getUserMedia(mediaOpts).then(successFunc).catch(errorFunc);</script>
 </body>
 
 </html>
