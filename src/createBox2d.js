@@ -3,6 +3,8 @@ export default ({
     height,
     vertex
 }) => {
+
+    
     let pNode = document.getElementById('canvas');
     if (!pNode) {
         pNode = document.createElement('canvas');
