@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>* {
+            padding: 0;
+            margin: 0;
+        }
+
+        html {
+            /* background: #000; */
+            width: 100%;
+        }
+
+        body {
+            width: 100%;
+        }
+
+        .box-1 {
+            background: rgb(224, 183, 50);
+        }
+
+        .box-2 {
+            background: #690;
+            position: absolute;
+        }</style>
+
+</head>
+
+<body>
+    <video id="video" width="300" height="300"></video>
+    <!-- <img width="40%" src="./armchair.jpg" id="img" /> -->
+    <!-- <script src="./main.js"></script> -->
+    <script>navigator.mediaDevices.getUserMedia({
+  audio: true,
+  video: {
+    facingMode: 'environment'
+  }
+}).then(function (stream) {
+  var url = window.URL.createObjectURL(stream);
+  var video = document.getElementById('video');
+  video.src = url;
+  console.log(url);
+});</script>
+</body>
+
+</html>
