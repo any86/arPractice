@@ -6,6 +6,7 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/3.0.0/vconsole.min.js"></script>
+    <script>var vConsole = new VConsole();</script>
     <title>Document</title>
     <style>* {
             padding: 0;
@@ -34,23 +35,25 @@
 
 <body>
     <video id="video" width="300" height="300"></video>
-    <!-- <img width="40%" src="./armchair.jpg" id="img" /> -->
-    <!-- <script src="./main.js"></script> -->
-    <script>var vConsole = new VConsole();
-navigator.mediaDevices.getUserMedia({
-  audio: true,
-  video: {
-    facingMode: {
-      exact: "environment"
-    }
-  }
-}).then(function (stream) {
-  var url = window.URL.createObjectURL(stream);
-  var video = document.getElementById('video');
-  video.src = url;
-  video.play();
-  console.log(url);
-});</script>
+    <img width="40%" src="/armchair.5b7467f5.jpg" id="img">
+    
+    <script src="/main.1f19ae8e.js"></script>
+    <script>// const video = document.getElementById('video');
+// navigator.mediaDevices.getUserMedia({
+//     audio: true,
+//     video:true
+//     // video: {
+//     //     facingMode: {
+//     //         exact: "environment"
+//     //     }
+//     // }
+// }).then(function(stream) {
+//     const url = window.URL.createObjectURL(stream);
+//     video.src = url;
+// })
+// document.body.addEventListener('click', ev=>{
+//     video.play();
+// })</script>
 </body>
 
 </html>

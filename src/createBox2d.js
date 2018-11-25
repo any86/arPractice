@@ -3,13 +3,11 @@ export default ({
     height,
     vertex
 }) => {
-
-    
     let pNode = document.getElementById('canvas');
     if (!pNode) {
         pNode = document.createElement('canvas');
-        canvas.id = 'canvas';
-        document.body.appendChild(canvas);
+        pNode.id = 'canvas';
+        document.body.appendChild(pNode);
     }
     pNode.style.width = width + 'px';
     pNode.style.height = height + 'px';
