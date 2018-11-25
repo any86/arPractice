@@ -19,8 +19,6 @@ getCameraVideo().then(stream => {
     const url = window.URL.createObjectURL(stream);
     video.src = url;
 
-
-    let img = document.getElementById('img');
     var arController = new ARController(video, 'Data/camera_para.dat');
     arController.onload = function() {
         arController.setPatternDetectionMode(artoolkit.AR_TEMPLATE_MATCHING_COLOR);
@@ -34,9 +32,15 @@ getCameraVideo().then(stream => {
                 vertex: ev.data.marker.vertex
             });
         });
-        arController.process(video);
+        
+        const play = ()=>{
+            arController.process();
+            requestAnimationFrame(()=>{
+                play();
+            });
+        }
+        play();
     };
-
 
 });
 document.addEventListener('click',ev=>{
@@ -46,7 +50,7 @@ document.addEventListener('click',ev=>{
 
 
 
-// let img = document.getElementById('img');
+// let img = document.getElementById('v');
 // var arController = new ARController(img, 'Data/camera_para.dat');
 // arController.onload = function() {
 //     arController.setPatternDetectionMode(artoolkit.AR_TEMPLATE_MATCHING_COLOR);
@@ -60,5 +64,12 @@ document.addEventListener('click',ev=>{
 //             vertex: ev.data.marker.vertex
 //         });
 //     });
-//     arController.process();
+    
+//     const play = ()=>{
+//         arController.process();
+//         requestAnimationFrame(()=>{
+//             play();
+//         });
+//     }
+//     play();
 // };
