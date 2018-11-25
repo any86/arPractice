@@ -1,10 +1,9 @@
-import VConsole from 'vconsole';
+// import VConsole from 'vconsole';
 import {
     ARCameraParam,
     ARController,
     artoolkit
 } from 'jsartoolkit5';
-var vConsole = new VConsole();
 import createBox2d from './createBox2d';
 import getCameraVideo from './getCameraVideo';
 

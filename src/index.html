@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/3.0.0/vconsole.min.js"></script>
     <title>Document</title>
     <style>
         * {
@@ -38,15 +39,20 @@
     <!-- <img width="40%" src="./armchair.jpg" id="img" /> -->
     <!-- <script src="./main.js"></script> -->
     <script>
+        var vConsole = new VConsole();
+
         navigator.mediaDevices.getUserMedia({
             audio: true,
             video: {
-                facingMode: 'environment'
+                facingMode: {
+                    exact: "environment"
+                }
             }
         }).then(function(stream) {
             const url = window.URL.createObjectURL(stream);
             const video = document.getElementById('video');
             video.src = url;
+            video.play();
             console.log(url);
         })
     </script>
